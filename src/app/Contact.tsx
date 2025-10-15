@@ -1,4 +1,12 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram, Github } from "lucide-react";
+import {
+    FaGithub,
+    FaLinkedin,
+    FaInstagram,
+    FaWhatsapp,
+    FaEnvelope,
+  } from "react-icons/fa";
+  import Link from "next/link";
+
 
 const Contact: React.FC = () => {
     return <>
@@ -15,52 +23,44 @@ const Contact: React.FC = () => {
                 {/* Infos principales */}
                 <div className="grid md:grid-cols-3 gap-8 text-sm md:text-base">
                   <div className="flex flex-col items-center">
-                    <Phone className="h-6 w-6 text-primary mb-2" />
-                    <p>+33 6 12 34 56 78</p>
-                    <p>+33 1 23 45 67 89</p>
+                    <a
+                      href="https://wa.me/590691282230"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-medium px-4 py-1 rounded-full text-sm transition"
+                    >
+                      <FaWhatsapp /> +33 640 29 25 94
+                    </a>
                   </div>
     
                   <div className="flex flex-col items-center">
-                    <Mail className="h-6 w-6 text-primary mb-2" />
-                    <p>contact@exemple.com</p>
-                    <p>support@exemple.com</p>
+                    <a
+                      href="mailto:caribbeancodelab@gmail.com"
+                      className="flex items-center gap-2 bg-white hover:bg-gray-200 text-black font-medium px-4 py-1 rounded-full text-sm transition"
+                    >
+                      <FaEnvelope /> caribbeancodelab@gmail.com
+                    </a>
                   </div>
     
                   <div className="flex flex-col items-center">
-                    <MapPin className="h-6 w-6 text-primary mb-2" />
-                    <p>Paris, France</p>
+                    <p className="text-sm text-gray-300">📍 Guadeloupe, FR</p>
                     <p>Ouvert du Lundi au Vendredi</p>
                   </div>
                 </div>
     
                 {/* Réseaux sociaux */}
                 <div className="flex justify-center gap-6 mt-8">
-                  <a
-                    href="https://linkedin.com/in/votreprofil"
-                    target="_blank"
-                    className="text-foreground hover:text-primary transition"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-7 w-7" />
-                  </a>
+                  <Link href="https://www.linkedin.com/company/kaouka/" target="_blank" aria-label="LinkedIn">
+                    <FaLinkedin className="w-5 h-5 hover:text-blue-300 transition" />
+                  </Link>
     
-                  <a
-                    href="https://instagram.com/votreprofil"
-                    target="_blank"
-                    className="text-foreground hover:text-primary transition"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="h-7 w-7" />
-                  </a>
+                  <Link href="https://www.instagram.com/caribbean_code/profilecard/?igsh=bjF4YTk5aWJtZnZn" target="_blank" aria-label="Instagram">
+                    <FaInstagram className="w-5 h-5 hover:text-pink-400 transition" />
+                  </Link>
     
-                  <a
-                    href="https://github.com/votreprofil"
-                    target="_blank"
-                    className="text-foreground hover:text-primary transition"
-                    aria-label="GitHub"
-                  >
-                    <Github className="h-7 w-7" />
-                  </a>
+                  <Link href="https://github.com" target="_blank" aria-label="GitHub">
+                    <FaGithub className="w-5 h-5 hover:text-gray-400 transition" />
+                  </Link>
                 </div>
     
                 {/* Pied */}
