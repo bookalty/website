@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
                       href="https://wa.me/590691282230"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-medium px-4 py-1 rounded-full text-sm transition"
+                      className="flex items-center gap-2 bg-green-900 hover:bg-gray-700 text-white font-medium px-4 py-1 rounded-full text-sm transition"
                     >
                       <FaWhatsapp /> +33 640 29 25 94
                     </a>
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
                   <div className="flex flex-col items-center">
                     <a
                       href="mailto:caribbeancodelab@gmail.com"
-                      className="flex items-center gap-2 bg-white hover:bg-gray-200 text-black font-medium px-4 py-1 rounded-full text-sm transition"
+                      className="flex items-center gap-2 bg-blue-800 hover:bg-gray-700 text-white font-medium px-4 py-1 rounded-full text-sm transition"
                     >
                       <FaEnvelope /> caribbeancodelab@gmail.com
                     </a>

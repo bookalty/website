@@ -8,30 +8,53 @@ type Plan = {
   highlight?: boolean;
   features: string[];
   cta: string;
+  link: string;
 };
 
 const plans: Plan[] = [
   {
-    name: "Starter",
+    name: "Open Source",
     monthly: 0,
     yearly: 0,
-    features: ["1 établissement", "Base des fonctions", "Email support"],
-    cta: "Commencer",
+    highlight: false,
+    features: [
+      "Hébergement libre (self-hosted)",
+      "Accès complet au code source",
+      "Mises à jour communautaires",
+      "Aucune limite d’utilisateurs",
+      "Support via GitHub et Discord",
+    ],
+    cta: "Voir sur GitHub",
+    link: "https://github.com/bookalty"
   },
   {
     name: "Pro",
-    monthly: 19,
-    yearly: 190,
+    monthly: 99,
+    yearly: 1099,
     highlight: true,
-    features: ["3 établissements", "Analytics", "Support prioritaire"],
+    features: [
+      "1 établissements", 
+      "Accès à toutes les fonctionnalités",
+      "Mises à jour régulières",
+      "Aucune limite d’utilisateurs",
+      "Support prioritaire"
+    ],
     cta: "Essayer Pro",
+    link: ""
   },
   {
     name: "Business",
-    monthly: 49,
-    yearly: 490,
-    features: ["Illimité", "SLA 99.9%", "Onboarding & SSO"],
-    cta: "Nous contacter",
+    monthly: 199,
+    yearly: 2199,
+    features: [
+      "Jusqu'à 10 établissement", 
+      "Accès à toutes les fonctionnalités",
+      "Aucune limite d’utilisateurs",
+      "Support dédié",
+      "Formation et onboarding"
+    ],
+    cta: "Essayer Business",
+    link: ""
   },
 ];
 
@@ -111,15 +134,26 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <button
-                  className={`mt-8 w-full rounded-full px-4 py-3 font-medium transition ${
-                    p.highlight
-                      ? "bg-primary text-background hover:opacity-90"
-                      : "bg-background text-foreground border border-accent hover:bg-foreground/10"
-                  }`}
-                >
-                  {p.cta}
-                </button>
+                 <div className="mt-auto relative group">
+                  <button
+                    onClick={() => {
+                      if (p.link) window.open(p.link, "_blank");
+                    }}
+                    disabled={!p.link}
+                    className={`w-full rounded-full px-4 py-3 font-medium transition border border-accent
+                      ${p.link
+                        ? "bg-background text-foreground hover:bg-foreground/10"
+                        : "bg-foreground/5 text-highlight cursor-not-allowed"
+                      }`}
+                  >
+                    {p.cta}
+                  </button>                    
+                  {!p.link && (
+                    <span className="absolute left-1/2 -translate-x-1/2 -top-10 bg-foreground text-background text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                      L'application n'est pas encore disponible.
+                    </span>
+                  )}
+                </div>
               </div>
             );
           })}
