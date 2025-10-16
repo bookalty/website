@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             <div className="scale-120 translate-y-40">
                 <div className="rounded-3xl shadow-[0_0_100px_10px_highlight]">
                 <Image
-                    src="/capture.png"
+                    src="/feature_images/inhouse.png"
                     alt="Hero"
                     width={2000}
                     height={1600}

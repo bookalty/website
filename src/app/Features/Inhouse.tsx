@@ -8,7 +8,7 @@ const InHouse: React.FC = () => {
                 {/* Bloc image */}
                 <div className="md:w-3/4 flex justify-center">
                     <Image
-                        src="/capture.png"
+                        src="/feature_images/inhouse.png"
                         alt="Hero"
                         width={1500}
                         height={600}

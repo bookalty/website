@@ -23,7 +23,7 @@ const Planning: React.FC = () => {
                 {/* Bloc image */}
                 <div className="md:w-3/4 flex justify-center mt-10 md:mt-0">
                     <Image
-                        src="/capture2.png"
+                        src="/feature_images/planning.png"
                         alt="Hero"
                         width={1500}
                         height={600}
