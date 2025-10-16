@@ -7,10 +7,10 @@ const Planning: React.FC = () => {
             <div className="flex flex-col md:flex-row mt-10 items-center justify-center px-5 max-w-7xl mx-auto px-5 md:px-5">
                  <div className="md:w-1/4 text-center space-y-6">
                   <h1 className="text-5xl font-bold text-foreground">
-                    Gestion simplifiée
+                    Planning de chambres
                   </h1>
                   <p className="text-xl text-highlight">
-                    Optimisez votre établissement avec un PMS open source.
+                    Gérez efficacement les réservations et disponibilités de vos chambres avec notre planning intuitif.
                   </p>
                   <a
                     href="#"

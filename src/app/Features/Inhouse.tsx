@@ -18,10 +18,10 @@ const InHouse: React.FC = () => {
                 </div>
                  <div className="md:w-1/4 text-center mt-10 md:mt-0 space-y-6">
                   <h1 className="text-5xl font-bold text-foreground">
-                    Gestion simplifiée
+                    Gestion des arrivées et départs
                   </h1>
                   <p className="text-xl text-highlight">
-                    Optimisez votre établissement avec un PMS open source.
+                    Toutes les arrivées et départs de vos clients en un coup d'œil.
                   </p>
                   <a
                     href="#"
