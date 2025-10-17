@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.bookalty.com
+
+# Sitemaps
+Sitemap: https://www.bookalty.com/sitemap.xml

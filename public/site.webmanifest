@@ -1,0 +1,23 @@
+{
+    "name": "Bookalty",
+    "short_name": "Bookalty",
+    "description": "PMS (Property Management System) gratuite pour les hôteliers et les propriétaires de locations",
+    "start_url": "https://www.bookalty.com/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#00ff95",
+    "lang": "fr-GP",
+    "icons": [
+      {
+        "src": "https://www.bookalty.com/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://www.bookalty.com/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
