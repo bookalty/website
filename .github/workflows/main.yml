@@ -20,7 +20,7 @@ jobs:
       - name: Upload build to server
         uses: burnett01/rsync-deployments@6.0.0
         with:
-          switches: -az --delete"
+          switches: -az --delete
           path: ./
           remote_path: /opt/bookalty/
           remote_host: ${{ secrets.SSH_HOST }}
