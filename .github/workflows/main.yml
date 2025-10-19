@@ -21,11 +21,11 @@ jobs:
         uses: burnett01/rsync-deployments@6.0.0
         with:
           switches: -az --delete"
-          rsh: "ssh -p ${{ secrets.SSH_PORT }}"
           path: ./
           remote_path: /opt/bookalty/
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USER }}
+          remote_port: ${{ secrets.SSH_PORT }}
           remote_key: ${{ secrets.SSH_KEY }}
 
       - name: Restart PM2
