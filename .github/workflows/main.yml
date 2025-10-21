@@ -31,7 +31,7 @@ jobs:
         with:
           switches: -az --delete
           path: ./
-          remote_path: /opt/bookalty/
+          remote_path: /opt/bookalty/bookalty_website/
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USER }}
           remote_port: ${{ secrets.SSH_PORT }}
@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /opt/bookalty/
+            cd /opt/bookalty/bookalty_website/
             npm ci --omit=dev
             npm run build
             pm2 restart bookalty
